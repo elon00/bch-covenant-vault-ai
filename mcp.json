@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "bch-covenant-vault-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "Bitcoin Cash",
+        "PROJECT_TICKER": "BCHCOV"
+      },
+      "tools": [
+        {
+          "name": "verify_bchcov_invariants",
+          "description": "Verifies deterministic invariants for BCH Covenant Vault AI on Bitcoin Cash."
+        },
+        {
+          "name": "execute_bchcov_action",
+          "description": "Executes authenticated Smart Contract state transition."
+        }
+      ]
+    }
+  }
+}
